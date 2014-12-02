@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 1. Load platform support before any code that touches the DOM. -->
+    <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <!-- 2. Load the component using an HTML Import -->
+    <link rel="import" href="../polymer_elements/my_element.html">
+    <style>
+      .red {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 3. Declare the element by its tag. -->
+    <!-- this is a Polymer web component -->
+    <my-element></my-element>
+    <p>
+      <span class="red">red</span>
+    </p>
+  </body>
+</html>

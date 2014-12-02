@@ -1,0 +1,34 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="my-element" attributes="username">
+  <template>
+  <style>
+    .red {
+      color: red;
+    }
+  
+    .username {
+      color: orange;
+      border: 1px solid #777;
+      padding: 5px;
+    }
+  </style>
+  <p>
+    <span class="red">Hello from </span>
+    <b>my-element</b>. This is my Shadow DOM. Yo yo, 
+    <span id="username" class="username">{{ username }}</span>
+  </p>
+  </template>
+  <script>
+    Polymer({});
+    console.log('yo');
+  
+    function addOne() {
+      console.log('calling function inside of web component');
+      var a = 3;
+      console.log(++a);
+    }
+  
+    addOne();
+  </script>
+</polymer-element>
