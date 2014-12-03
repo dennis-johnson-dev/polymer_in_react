@@ -1,8 +1,14 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<!-- <link rel="import" href="/path/to/other/element"  -->
 
 <polymer-element name="my-element" attributes="username">
   <template>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
   <style>
+    :host {
+      font-family: sans-serif;
+    }
+
     .red {
       color: red;
     }
@@ -14,21 +20,25 @@
     }
   </style>
   <p>
-    <span class="red">Hello from </span>
-    <b>my-element</b>. This is my Shadow DOM. Yo yo, 
-    <span id="username" class="username">{{ username }}</span>
+    <span class="red">Hello from red class with color: red</span> inside of 
+    <b> my-element</b>. This is my Shadow DOM. Yo yo, 
+    <span id="username" class="username">{{ username }}</span> likes data-binding  
+  </p>
+  <p>
+    <button class="btn btn-primary">Bootstrap Button</button>
   </p>
   </template>
   <script>
-    Polymer({});
-    console.log('yo');
+    Polymer({
+      ready: function() {
+        console.log('element is ready');
+      }
+    });
   
-    function addOne() {
+    function innerFunc() {
       console.log('calling function inside of web component');
-      var a = 3;
-      console.log(++a);
     }
   
-    addOne();
+    innerFunc();
   </script>
 </polymer-element>

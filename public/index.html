@@ -2,12 +2,15 @@
 <html>
   <head>
     <script src="./vendor/react.js"></script>
-    <script src="./vendor/jsx_transform.js"></script>
     <!-- 1. Load platform support before any code that touches the DOM. -->
     <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <!-- 2. Load the component using an HTML Import -->
     <link rel="import" href="../polymer_elements/my_element.html">
     <style>
+      body {
+        font-family: serif; 
+      }
+
       .red {
         color: blue;
       }
@@ -15,28 +18,8 @@
   </head>
   <body>
 
-    <script type="text/jsx">
-      var Hello = React.createClass({
-
-        getInitialState: function() {
-          return {
-            name: 'Strongbad'
-          };
-        },
-
-        render: function() {
-          return (
-            <div>
-              <div dangerouslySetInnerHTML={{__html: '<my-element username=' + this.state.name + '></my-element>'}} />
-              <p>
-                <span className="red">class="red"</span>
-              </p>
-            </div>
-          );
-        }
-      });
-      React.render(<Hello name="World" />, document.body);
-    </script>
+    <!-- Load in React component -->
+    <script src="./js/bundle.js" type="text/javascript"></script>
 
   </body>
 </html>
