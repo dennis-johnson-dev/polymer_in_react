@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../bower_components/react/react.js"></script>
+    <script src="../bower_components/CustomElements/src/custom-elements.js"></script>
+    <script src="./vendor/reactive-elements.js"></script>
+    <script src="../reactive_elements/my-reactive-element.js"></script>
+
+    <style>
+      body {
+        font-family: serif; 
+      }
+
+      .red {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+
+    <button onClick="callReactComponenetMethod()">Call React component method</button>
+
+    <my-reactive-element id="reactElement" class="sweet" property="Strongsad"></my-reactive-element>
+
+    <script>
+      function callReactComponenetMethod() {
+        var reactElement = document.getElementById('reactElement');
+        reactElement.changeColor();
+      }
+    </script>
+
+  </body>
+</html>
